@@ -12,7 +12,7 @@ void maxMin
 int main()
 {
     struct date stu[2] = 
-    {{"fuck",65},{"nice",28}};
+    {{"Mary",65},{"Peter",28}};
     int max,min,maxIndex,minIndex;
     
     
