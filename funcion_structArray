@@ -14,6 +14,8 @@ int main()
     struct date stu[2] = 
     {{"Mary",65},{"Peter",28}};
     int max,min,maxIndex,minIndex;
+    max = min = stu->math;
+    maxIndex = minIndex = 0;
     
     
     maxMin(&max,&min,&maxIndex,&minIndex,stu);
