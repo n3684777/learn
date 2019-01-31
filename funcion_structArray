@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+struct date
+{
+    char name[12];
+    int math;
+};
+
+void maxMin
+(int*,int*,int*,int*,struct date stu[]);
+
+int main()
+{
+    struct date stu[2] = 
+    {{"fuck",65},{"nice",28}};
+    int max,min,maxIndex,minIndex;
+    
+    
+    maxMin(&max,&min,&maxIndex,&minIndex,stu);
+    
+  printf("%s為最高分，",(stu+maxIndex)->name);
+  printf("最高分數為 = %d\n",max);
+  printf("%s為最低分，",(stu+minIndex)->name);
+  printf("最低分數為 = %d\n",min);
+    
+}
+
+void maxMin
+(int* max,int* min,int* M,int* m,struct date  ptr[])
+{
+    int i;
+    *max = *min = ptr->math;
+    for(i=0;i<2;i++)
+    {
+        if(*max < (ptr+i)->math)
+        {
+            *max = (ptr+i)->math;
+            *M = i;
+        }
+        if(*min > (ptr+i)->math)
+        {
+            *min = (ptr+i)->math;
+            *m = i;
+        }
+    }
+}
